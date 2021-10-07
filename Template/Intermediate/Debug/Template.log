@@ -1,0 +1,67 @@
+﻿  PlayScene.cpp
+C:\Users\angel\Desktop\School\Game Physics GAME(2005)\GAME2005_Labs\src\PlayScene.cpp(25,11): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\angel\Desktop\School\Game Physics GAME(2005)\GAME2005_Labs\src\PlayScene.cpp(26,11): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\angel\Desktop\School\Game Physics GAME(2005)\GAME2005_Labs\src\PlayScene.cpp(27,109): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\angel\Desktop\School\Game Physics GAME(2005)\GAME2005_Labs\src\PlayScene.cpp(27,92): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\angel\Desktop\School\Game Physics GAME(2005)\GAME2005_Labs\src\PlayScene.cpp(27,77): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\angel\Desktop\School\Game Physics GAME(2005)\GAME2005_Labs\src\PlayScene.cpp(27,65): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\angel\Desktop\School\Game Physics GAME(2005)\GAME2005_Labs\src\PlayScene.cpp(45,52): warning C4244: '=': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\angel\Desktop\School\Game Physics GAME(2005)\GAME2005_Labs\src\PlayScene.cpp(48,107): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\angel\Desktop\School\Game Physics GAME(2005)\GAME2005_Labs\src\PlayScene.cpp(48,94): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\angel\Desktop\School\Game Physics GAME(2005)\GAME2005_Labs\src\PlayScene.cpp(48,81): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\angel\Desktop\School\Game Physics GAME(2005)\GAME2005_Labs\src\PlayScene.cpp(48,68): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\angel\Desktop\School\Game Physics GAME(2005)\GAME2005_Labs\src\PlayScene.cpp(63,27): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\angel\Desktop\School\Game Physics GAME(2005)\GAME2005_Labs\src\PlayScene.cpp(64,30): warning C4244: '=': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\angel\Desktop\School\Game Physics GAME(2005)\GAME2005_Labs\src\PlayScene.cpp(69,75): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\angel\Desktop\School\Game Physics GAME(2005)\GAME2005_Labs\src\PlayScene.cpp(69,60): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\angel\Desktop\School\Game Physics GAME(2005)\GAME2005_Labs\src\PlayScene.cpp(83,68): warning C4244: '=': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\angel\Desktop\School\Game Physics GAME(2005)\GAME2005_Labs\src\PlayScene.cpp(84,69): warning C4244: '=': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+  Template.vcxproj -> C:\Users\angel\Desktop\School\Game Physics GAME(2005)\GAME2005_Labs\bin\Debug\Template.exe

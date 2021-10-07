@@ -1,0 +1,70 @@
+﻿  imgui.cpp
+  imgui_demo.cpp
+  imgui_draw.cpp
+  imgui_tables.cpp
+  imgui_widgets.cpp
+  imgui_sdl.cpp
+C:\Users\angel\Desktop\School\Game Physics GAME(2005)\SDL_Engine-master\include\IMGUI_SDL\imgui_sdl.cpp(3,10): fatal error C1083: Cannot open include file: 'SDL.h': No such file or directory
+  Agent.cpp
+C:\Users\angel\Desktop\School\Game Physics GAME(2005)\SDL_Engine-master\src\Agent.h(5,10): fatal error C1083: Cannot open include file: 'glm/vec4.hpp': No such file or directory
+  Button.cpp
+C:\Users\angel\Desktop\School\Game Physics GAME(2005)\SDL_Engine-master\src\Transform.h(4,10): fatal error C1083: Cannot open include file: 'glm/vec2.hpp': No such file or directory
+  CollisionManager.cpp
+C:\Users\angel\Desktop\School\Game Physics GAME(2005)\SDL_Engine-master\src\Transform.h(4,10): fatal error C1083: Cannot open include file: 'glm/vec2.hpp': No such file or directory
+  ImGuiWindowFrame.cpp
+C:\Users\angel\Desktop\School\Game Physics GAME(2005)\SDL_Engine-master\src\ImGuiWindowFrame.h(4,10): fatal error C1083: Cannot open include file: 'SDL.h': No such file or directory
+  Obstacle.cpp
+C:\Users\angel\Desktop\School\Game Physics GAME(2005)\SDL_Engine-master\src\Transform.h(4,10): fatal error C1083: Cannot open include file: 'glm/vec2.hpp': No such file or directory
+  Sprite.cpp
+C:\Users\angel\Desktop\School\Game Physics GAME(2005)\SDL_Engine-master\src\Transform.h(4,10): fatal error C1083: Cannot open include file: 'glm/vec2.hpp': No such file or directory
+  UIControl.cpp
+C:\Users\angel\Desktop\School\Game Physics GAME(2005)\SDL_Engine-master\src\Transform.h(4,10): fatal error C1083: Cannot open include file: 'glm/vec2.hpp': No such file or directory
+  DisplayObject.cpp
+C:\Users\angel\Desktop\School\Game Physics GAME(2005)\SDL_Engine-master\src\Transform.h(4,10): fatal error C1083: Cannot open include file: 'glm/vec2.hpp': No such file or directory
+  EndScene.cpp
+  The contents of <optional> are available only with C++17 or later.
+C:\Users\angel\Desktop\School\Game Physics GAME(2005)\SDL_Engine-master\src\Transform.h(4,10): fatal error C1083: Cannot open include file: 'glm/vec2.hpp': No such file or directory
+  FontManager.cpp
+C:\Users\angel\Desktop\School\Game Physics GAME(2005)\SDL_Engine-master\src\FontManager.h(11,9): fatal error C1083: Cannot open include file: 'SDL.h': No such file or directory
+  Game.cpp
+C:\Users\angel\Desktop\School\Game Physics GAME(2005)\SDL_Engine-master\src\Game.h(11,10): fatal error C1083: Cannot open include file: 'SDL.h': No such file or directory
+  GameController.cpp
+C:\Users\angel\Desktop\School\Game Physics GAME(2005)\SDL_Engine-master\src\GameController.h(5,10): fatal error C1083: Cannot open include file: 'SDL.h': No such file or directory
+  GameObject.cpp
+C:\Users\angel\Desktop\School\Game Physics GAME(2005)\SDL_Engine-master\src\Transform.h(4,10): fatal error C1083: Cannot open include file: 'glm/vec2.hpp': No such file or directory
+  Label.cpp
+C:\Users\angel\Desktop\School\Game Physics GAME(2005)\SDL_Engine-master\src\Transform.h(4,10): fatal error C1083: Cannot open include file: 'glm/vec2.hpp': No such file or directory
+  Generating Code...
+  Compiling...
+  PlayScene.cpp
+  The contents of <optional> are available only with C++17 or later.
+C:\Users\angel\Desktop\School\Game Physics GAME(2005)\SDL_Engine-master\src\Transform.h(4,10): fatal error C1083: Cannot open include file: 'glm/vec2.hpp': No such file or directory
+  main.cpp
+C:\Users\angel\Desktop\School\Game Physics GAME(2005)\SDL_Engine-master\src\Game.h(11,10): fatal error C1083: Cannot open include file: 'SDL.h': No such file or directory
+  Plane.cpp
+C:\Users\angel\Desktop\School\Game Physics GAME(2005)\SDL_Engine-master\src\Transform.h(4,10): fatal error C1083: Cannot open include file: 'glm/vec2.hpp': No such file or directory
+  Player.cpp
+C:\Users\angel\Desktop\School\Game Physics GAME(2005)\SDL_Engine-master\src\Transform.h(4,10): fatal error C1083: Cannot open include file: 'glm/vec2.hpp': No such file or directory
+  Renderer.cpp
+C:\Users\angel\Desktop\School\Game Physics GAME(2005)\SDL_Engine-master\src\Renderer.h(4,10): fatal error C1083: Cannot open include file: 'SDL.h': No such file or directory
+  Scene.cpp
+  The contents of <optional> are available only with C++17 or later.
+C:\Users\angel\Desktop\School\Game Physics GAME(2005)\SDL_Engine-master\src\Transform.h(4,10): fatal error C1083: Cannot open include file: 'glm/vec2.hpp': No such file or directory
+  ship.cpp
+C:\Users\angel\Desktop\School\Game Physics GAME(2005)\SDL_Engine-master\src\TextureManager.h(10,10): fatal error C1083: Cannot open include file: 'glm/vec2.hpp': No such file or directory
+  SoundManager.cpp
+C:\Users\angel\Desktop\School\Game Physics GAME(2005)\SDL_Engine-master\src\SoundManager.h(11,10): fatal error C1083: Cannot open include file: 'SDL_mixer.h': No such file or directory
+  EventManager.cpp
+C:\Users\angel\Desktop\School\Game Physics GAME(2005)\SDL_Engine-master\src\EventManager.h(5,10): fatal error C1083: Cannot open include file: 'SDL.h': No such file or directory
+  SpriteSheet.cpp
+C:\Users\angel\Desktop\School\Game Physics GAME(2005)\SDL_Engine-master\src\SpriteSheet.h(7,10): fatal error C1083: Cannot open include file: 'SDL.h': No such file or directory
+  StartScene.cpp
+  The contents of <optional> are available only with C++17 or later.
+C:\Users\angel\Desktop\School\Game Physics GAME(2005)\SDL_Engine-master\src\Transform.h(4,10): fatal error C1083: Cannot open include file: 'glm/vec2.hpp': No such file or directory
+  Target.cpp
+C:\Users\angel\Desktop\School\Game Physics GAME(2005)\SDL_Engine-master\src\Transform.h(4,10): fatal error C1083: Cannot open include file: 'glm/vec2.hpp': No such file or directory
+  TextureManager.cpp
+C:\Users\angel\Desktop\School\Game Physics GAME(2005)\SDL_Engine-master\src\TextureManager.h(10,10): fatal error C1083: Cannot open include file: 'glm/vec2.hpp': No such file or directory
+  Util.cpp
+C:\Users\angel\Desktop\School\Game Physics GAME(2005)\SDL_Engine-master\src\Util.h(5,10): fatal error C1083: Cannot open include file: 'GLM/vec2.hpp': No such file or directory
+  Generating Code...
