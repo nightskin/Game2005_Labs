@@ -2,11 +2,14 @@
 #include "Game.h"
 #include "EventManager.h"
 
-// required for IMGUI
+//Required for IMGUI
 #include "imgui.h"
 #include "imgui_sdl.h"
 #include "Renderer.h"
 #include "Util.h"
+
+//Other Stuff
+#include <string>
 
 PlayScene::PlayScene()
 {
@@ -42,7 +45,7 @@ void PlayScene::draw()
 		if (nextPoint.y < groundLv)
 		{
 			nextPoint.x = startPos.x + vx * timeSinceLaunch;
-			nextPoint.y = startPos.y + vy * timeSinceLaunch + 0.5 * gravity * pow(timeSinceLaunch, 2);
+			nextPoint.y = startPos.y + vy * timeSinceLaunch + 0.5 * gravity* pow(timeSinceLaunch, 2);
 
 			//Draw Line
 			SDL_RenderDrawLine(Renderer::Instance().getRenderer(), lastPoint.x, lastPoint.y, nextPoint.x, nextPoint.y);
@@ -57,20 +60,33 @@ void PlayScene::draw()
 	
 
 
-	SDL_Rect *intecerpt1 = new SDL_Rect();
-	intecerpt1->h = 10;
-	intecerpt1->w = 10;
-	intecerpt1->y = groundLv - intecerpt1->h/2;
-	intecerpt1->x = lastPoint.x - intecerpt1->w * 2;
+	SDL_Rect *intecerpt = new SDL_Rect();
+	intecerpt->h = 10;
+	intecerpt->w = 10;
+	intecerpt->y = groundLv - intecerpt->h/2;
+	intecerpt->x = lastPoint.x - intecerpt->w * 2;
 
 
 	//Draw Ground as black line
 	SDL_SetRenderDrawColor(Renderer::Instance().getRenderer(), 0, 0, 0, 255);
 	SDL_RenderDrawLine(Renderer::Instance().getRenderer(), 0, groundLv, 800, groundLv);
 
-	//Draw Intercepts as blue sqaures
+	//Draw Intercepts as black sqaures
+	SDL_SetRenderDrawColor(Renderer::Instance().getRenderer(), 0, 0, 0, 255);
+	SDL_RenderFillRect(Renderer::Instance().getRenderer(), intecerpt);
+
+	
+	float s = 15;
+
+	//Draw Velocity as red line
+	glm::vec2 v = glm::vec2(grenade->getTransform()->position.x + velocity.x * s, grenade->getTransform()->position.y - -velocity.y * s);
+	SDL_SetRenderDrawColor(Renderer::Instance().getRenderer(), 255, 0, 0, 255);
+	SDL_RenderDrawLine(Renderer::Instance().getRenderer(), grenade->getTransform()->position.x, grenade->getTransform()->position.y, v.x,v.y);
+
+	//Draw Acceleration as blue line
+	glm::vec2 a = glm::vec2(grenade->getTransform()->position.x + acceleration.x * s, grenade->getTransform()->position.y - -acceleration.y * s);
 	SDL_SetRenderDrawColor(Renderer::Instance().getRenderer(), 0, 0, 255, 255);
-	SDL_RenderFillRect(Renderer::Instance().getRenderer(), intecerpt1);
+	SDL_RenderDrawLine(Renderer::Instance().getRenderer(), grenade->getTransform()->position.x, grenade->getTransform()->position.y, a.x, a.y);
 
 	SDL_SetRenderDrawColor(Renderer::Instance().getRenderer(), 255, 255, 255, 255);
 }
@@ -85,10 +101,20 @@ void PlayScene::update()
 
 	if (simStarted)
 	{
-		acceleration.y += gravity * dt;
+		acceleration.y += gravity* dt;
 		velocity += acceleration * dt;
 		//Move Grenade
-		grenade->getTransform()->position += velocity;
+		if (grenade->getTransform()->position.y <= groundLv - 32)
+		{
+			grenade->getTransform()->position += velocity;
+		}
+		else
+		{
+			velocity.y = 0;
+			acceleration.y = 0;
+			grenade->getTransform()->position.x += velocity.x;
+		}
+
 	}
 	else
 	{
@@ -218,10 +244,19 @@ void PlayScene::GUI_Function()
 	
 	ImGui::Begin("Controls", NULL, ImGuiWindowFlags_AlwaysAutoResize | ImGuiWindowFlags_MenuBar | ImGuiWindowFlags_NoMove);
 	
-	ImGui::SliderFloat("LaunchElevationAngle", &launchElevationAngle, -90.0f, 90.0f, "%.3f");
-	ImGui::SliderFloat("launchSpeed", &launchSpeed, -500.0f, 500.0f, "%.3f");
-	ImGui::SliderFloat("accelerationGravity", &gravity, -1500.0f, 1500.0f, "%.3f");
-	ImGui::SliderFloat2("StartPosY", &startPos.x, -0.0f, 1000.0f, "%.1f,");
+	std::string xStr = std::to_string(grenade->getTransform()->position.x);
+	std::string yStr = std::to_string(grenade->getTransform()->position.y);
+
+	const char* y = yStr.c_str();
+	const char* x = xStr.c_str();
+
+	ImGui::LabelText("X Position", x);
+	ImGui::LabelText("Y Postition", y);
+	ImGui::SliderFloat("Mass", &mass, -90.0f, 90.0f, "%.3f");
+	ImGui::SliderFloat("LaunchAngle", &launchElevationAngle, -90.0f, 90.0f, "%.3f");
+	ImGui::SliderFloat("LaunchSpeed", &launchSpeed, -500.0f, 500.0f, "%.3f");
+	ImGui::SliderFloat("Gravity", &gravity, -1500.0f, 1500.0f, "%.3f");
+	ImGui::SliderFloat2("StartPosition", &startPos.x, -0.0f, 1000.0f, "%.1f,");
 
 	ImGui::End();
 }

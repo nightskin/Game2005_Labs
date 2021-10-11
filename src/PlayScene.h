@@ -31,7 +31,6 @@ private:
 	
 	glm::vec2 startPos = glm::vec2(100,400);
 	glm::vec2 velocity = glm::vec2(0,0);
-
 	glm::vec2 acceleration = glm::vec2(0, 0);
 
 
@@ -40,6 +39,7 @@ private:
 
 	float groundLv = 550;
 	float gravity = 981;
+	float mass = 10;
 
 	Bomb* grenade;
 
