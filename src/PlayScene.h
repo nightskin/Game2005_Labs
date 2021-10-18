@@ -40,6 +40,7 @@ private:
 	float groundLv = 550;
 	float gravity = 981;
 	float mass = 10;
+	float friction = 0.42;
 
 	Bomb* grenade;
 

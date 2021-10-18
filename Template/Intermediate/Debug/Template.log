@@ -1,4 +1,5 @@
 ﻿  PlayScene.cpp
+C:\Users\angel\Desktop\School\Game Physics GAME(2005)\GAME2005_Labs\src\PlayScene.h(43,17): warning C4305: 'initializing': truncation from 'double' to 'float'
 C:\Users\angel\Desktop\School\Game Physics GAME(2005)\GAME2005_Labs\src\PlayScene.cpp(28,11): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
 C:\Users\angel\Desktop\School\Game Physics GAME(2005)\GAME2005_Labs\src\PlayScene.cpp(29,11): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
 C:\Users\angel\Desktop\School\Game Physics GAME(2005)\GAME2005_Labs\src\PlayScene.cpp(30,109): warning C4244: 'argument': conversion from 'T' to 'int', possible loss of data
@@ -94,15 +95,14 @@ C:\Users\angel\Desktop\School\Game Physics GAME(2005)\GAME2005_Labs\src\PlayScen
           [
               T=float
           ]
-C:\Users\angel\Desktop\School\Game Physics GAME(2005)\GAME2005_Labs\src\PlayScene.cpp(99,68): warning C4244: '=': conversion from 'double' to 'T', possible loss of data
+C:\Users\angel\Desktop\School\Game Physics GAME(2005)\GAME2005_Labs\src\PlayScene.cpp(105,70): warning C4244: '=': conversion from 'double' to 'T', possible loss of data
           with
           [
               T=float
           ]
-C:\Users\angel\Desktop\School\Game Physics GAME(2005)\GAME2005_Labs\src\PlayScene.cpp(100,69): warning C4244: '=': conversion from 'double' to 'T', possible loss of data
+C:\Users\angel\Desktop\School\Game Physics GAME(2005)\GAME2005_Labs\src\PlayScene.cpp(106,71): warning C4244: '=': conversion from 'double' to 'T', possible loss of data
           with
           [
               T=float
           ]
-  LINK : program database C:\Users\angel\Desktop\School\Game Physics GAME(2005)\GAME2005_Labs\bin\Debug\Template.pdb missing; performing full link
   Template.vcxproj -> C:\Users\angel\Desktop\School\Game Physics GAME(2005)\GAME2005_Labs\bin\Debug\Template.exe

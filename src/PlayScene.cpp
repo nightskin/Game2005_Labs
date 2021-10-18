@@ -96,32 +96,42 @@ void PlayScene::update()
 	
 	updateDisplayList();
 	float dt = Game::Instance().getDeltaTime();
-	velocity.x = cos(launchElevationAngle * M_PI / 180) * launchSpeed * dt;
-	velocity.y = sin(-launchElevationAngle * M_PI / 180) * launchSpeed * dt;
 
 	if (simStarted)
 	{
-		acceleration.y += gravity* dt;
-		velocity += acceleration * dt;
 		//Move Grenade
-		if (grenade->getTransform()->position.y <= groundLv - 32)
+		if (grenade->getTransform()->position.y <= groundLv - grenade->getHeight()/2)
 		{
-			grenade->getTransform()->position += velocity;
+			velocity.x = cos(launchElevationAngle * M_PI / 180) * launchSpeed * dt;
+			velocity.y = sin(-launchElevationAngle * M_PI / 180) * launchSpeed * dt;
+
+			acceleration.y += gravity * dt;
+			velocity.y += acceleration.y * dt;
 		}
 		else
 		{
-			velocity.y = 0;
 			acceleration.y = 0;
-			grenade->getTransform()->position.x += velocity.x;
+			velocity.y = 0;
+			if (velocity.x < 0 && acceleration.x < 0)
+			{
+				velocity.x = 0;
+				acceleration.x = 0;
+			}
+			else
+			{
+				acceleration.x -= mass * friction * dt;
+				velocity.x += acceleration.x * dt;
+			}
+
 		}
 
+		grenade->getTransform()->position += velocity;
 	}
 	else
 	{
 		grenade->getTransform()->position = glm::vec2(startPos.x, startPos.y);
 		velocity = glm::vec2(0, 0);
 		acceleration = glm::vec2(0, 0);
-		
 	}
 
 
@@ -252,11 +262,14 @@ void PlayScene::GUI_Function()
 
 	ImGui::LabelText("X Position", x);
 	ImGui::LabelText("Y Postition", y);
-	ImGui::SliderFloat("Mass", &mass, -90.0f, 90.0f, "%.3f");
+
+	ImGui::SliderFloat("Mass", &mass, 0.0f, 100.0f, "%.3f");
+	ImGui::SliderFloat("Friction", &friction, 0.0f, 10.0f, "%.3f");
 	ImGui::SliderFloat("LaunchAngle", &launchElevationAngle, -90.0f, 90.0f, "%.3f");
-	ImGui::SliderFloat("LaunchSpeed", &launchSpeed, -500.0f, 500.0f, "%.3f");
-	ImGui::SliderFloat("Gravity", &gravity, -1500.0f, 1500.0f, "%.3f");
-	ImGui::SliderFloat2("StartPosition", &startPos.x, -0.0f, 1000.0f, "%.1f,");
+	ImGui::SliderFloat("LaunchSpeed", &launchSpeed, 0.0f, 500.0f, "%.3f");
+	ImGui::SliderFloat("Gravity", &gravity, -20.0f, 20.0f, "%.3f");
+	ImGui::SliderFloat("StartPositionX", &startPos.x, 0.0f, 800.0f, "%.1f,");
+	ImGui::SliderFloat("StartPositionY", &startPos.y, 0.0f, 600.0f, "%.1f,");
 
 	ImGui::End();
 }
